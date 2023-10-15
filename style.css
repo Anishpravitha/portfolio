@@ -31,7 +31,7 @@ body{
 }
 .navbar-dark .navbar-nav .nav-link .active,
 .navbar-dark .navbar-nav .nav-link:hover{
-    color: #1ebba3;
+    color: rgb(97, 97, 241)
 }
 
 .heading-content{
@@ -47,12 +47,14 @@ body{
     font-weight: 300;
     color: #fff;
     font-family: monospace;
+    
 }
 .heading-content h1{
     font-size: 5em;
     font-weight: bolder;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+    
 }
 .heading-content p{
     font-size: 1.5em;
@@ -60,7 +62,11 @@ body{
     color: #ccc;
     word-spacing: 10px;
     letter-spacing: 15px;
-    
+    animation: anim 2s ease-in-out 2s infinite;   
+}
+
+.heading-content p:hover{
+    animation-play-state: paused;
 }
 
 .background img{
@@ -79,6 +85,12 @@ body{
 }
 .post-heading hr{
     padding-bottom: 3rem;
+    color: rgb(97, 97, 241)
+}
+
+.post-heading h3{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(97, 97, 241)
 }
 
 
@@ -87,31 +99,38 @@ body{
 
 /* About start */
 
-#about .btn{
-    border: 2px solid transparent;
-    width: 40%;
-    padding: 15px 22px;
-    background: #000;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-#about .btn a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-}
-#about .btn:hover{
-    border: 2px solid #1ebba3;
-}
+
 .greyback{
     background-color: grey;
     border: 1px solid grey;
-    border-radius: 200px; 
+    border-radius: 200px;
+    
 }
 #about img{
     width: 10%;
 }
+#about .item span{
+    color: rgb(97, 97, 241);
+    font-size: 14px;
+}
+
+
+#about .dropdown{
+    font-family: 'Poppins', sans-serif;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Service start */
 
@@ -130,34 +149,36 @@ body{
     font-weight: bold;
 }
 #service .button:hover{
-    border: 2px solid #1ebba3;
+    border: 2px solid rgb(97, 97, 241);
 }
 
-/* Newsletter start */
-
-.sec1{
-    display: flex;
-    flex-direction: column;
+.card img{
+    border-radius: 200px;
+    width: 50%;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: #f8fafb;
 }
-.sec1 h2{
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    letter-spacing: 3px;
-    line-height: 50px;
+
+.card:hover{
+    box-shadow: 5px 10px 8px #888888;
 }
-.input-group1{
-    display: flex;
+.card h5{
+    color: rgb(97, 97, 241);
 }
-.input-group1 .btn{
-    margin-left: 5px;
-}
+
+
+
+
+
+/* Contact start */
 
 #contact{
     width: 50%;
+}
+
+
+/* footer */
+.bggray{
+    background-color: grey;
 }
 
 
@@ -200,6 +221,7 @@ body{
     .post-heading hr{
         padding-bottom: 2rem;
     }
+   
 }
 
 @media screen and (max-width: 479px){
@@ -236,6 +258,26 @@ body{
     }
     .post-heading hr{
         padding-bottom: 1rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+@keyframes anim{
+    0%{
+        color: rgb(97, 97, 241);
+    }
+    50%{
+        color: rgba(255, 0, 0, 0)
+    }
+    100%{
+        color: rgb(97, 97, 241);
     }
 }
 
